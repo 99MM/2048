@@ -22,7 +22,8 @@ jobs:
         run: pip install pyinstaller
 
       - name: Clean
-        run: rmdir /s /q build dist
+        shell: bash
+        run: rm -rf build dist
 
       - name: Build EXE
         run: pyinstaller --onefile --windowed -y 2048.py
