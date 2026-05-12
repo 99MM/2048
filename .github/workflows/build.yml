@@ -55,7 +55,7 @@ jobs:
         run: rm -rf build dist
 
       - name: Build APP
-        run: pyinstaller --onefile -y 2048.py
+        run: pyinstaller --onefile --windowed --noconsole -y 2048.py
 
       - name: Upload APP
         uses: actions/upload-artifact@v4
